@@ -2,9 +2,22 @@
 
 <%= form_with model: @book, url: book_path(@book.id), method: :patch do |f| %>
 
-<div class="form-group">
+<div class= "field">
   <%= f.label :title %>
   <%= f.text_field :title %>
 </div>
+
+<div class= "field">
+  <%= f.label :body %>
+  <%= f.text_area :body %>
+</div>
+
+<div>
+  <%= f.submit "update" %>
+</div>
+
+<P>
+  <link_to >
+</P>
 
 <% end %>
