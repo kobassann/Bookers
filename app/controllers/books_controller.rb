@@ -1,5 +1,6 @@
 class BooksController < ApplicationController
-
+  before_action :authenticate_member!
+  
   def create
     @book = Book.new(book_params)
     if@book.save
