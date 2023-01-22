@@ -4,6 +4,7 @@ class BooksController < ApplicationController
   def create
     @book = Book.new(book_params)
     @books = Book.all
+    #renderでindexを使っているため、ないと@booksが定義されないのでエラーが出る
     if@book.save
     flash[:notice] = "Book was successfully created."
       redirect_to book_path(@book.id)
